@@ -334,210 +334,217 @@ About
 }
 /*
 =============== 
-Services
+Archetypes
 ===============
 */
-
-#services {
-  background: var(--clr-grey-10);
+#archetypes {
+  background: var(--clr-white);
 }
 
-.services {
+.archetypes-box {
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 5rem;
+  gap: 3.5rem;
 }
 
-.service {
-  text-align: center;
+.archetype {
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  box-shadow: var(--light-shadow);
+  padding: 5rem 3rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
-.service-icon {
-  background: var(--clr-primary-5);
-  padding: 1rem 2rem;
-  color: var(--clr-primary-1);
-  font-size: 2rem;
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  align-self: flex-start;
+.archetype:hover {
+  border: 2px solid var(--second-clr-dark);
+  box-shadow: var(--dark-shadow);
 }
 
-.service p {
-  max-width: 20rem;
-  margin: 0 auto;
+.archetype img {
+  width: 15rem;
+  margin-bottom: 2rem;
+}
+
+.archetype h3 {
+  font-size: 2.3rem;
+}
+
+.archetype .arch-btn {
+  padding: 1rem;
+  line-height: 1;
+  font-size: 1.5rem;
+  align-self: start;
+  margin-top: auto;
 }
 
 @media screen and (min-width: 768px) {
-  .services {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    justify-content: space-between;
-  }
-
-  .service {
-    display: flex;
-    gap: 1rem;
-    text-align: left;
-  }
-
-  .service h4 {
-    margin-bottom: 0.3rem;
-  }
-
-  .service p {
-    max-width: initial;
+  .archetypes-box {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+@media screen and (min-width: 1200px) {
+  .archetypes-box {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
 /*
 =============== 
-Featured Tours
+Threats
 ===============
 */
 
-.featured {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+#threats {
+  background: var(--off-white-clr);
+  padding: 5rem 0;
 }
 
-.tour-card {
-  transition: var(--transition);
-  background: var(--clr-grey-10);
-  box-shadow: var(--light-shadow);
-}
-
-.tour-card:hover {
-  box-shadow: var(--dark-shadow);
-  transform: scale(1.02);
-}
-
-.tour-img-container {
-  position: relative;
-}
-
-.tour-img {
-  height: 20rem;
-  object-fit: cover;
-}
-
-.tour-date {
-  position: absolute;
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-1);
-  padding: 0.5rem 1rem;
-  bottom: 0;
-  margin: 0;
-  text-transform: capitalize;
-}
-
-.tour-info {
+#threats .section-title {
+  margin: 0 auto;
   padding: 2rem;
 }
 
-.tour-footer {
-  display: flex;
-  justify-content: space-between;
+.threats {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(9, 30dvh);
+  gap: 2rem;
   padding: 0 2rem;
 }
 
-.tour-btn {
-  text-align: center;
-  padding-top: 5rem;
+.threat {
+  border-radius: 0.5rem;
+  transition: var(--transition);
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 1rem;
+  transition: var(--transition);
 }
 
-@media screen and (min-width: 640px) {
-  .featured {
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
-  }
-
-  .tour-img {
-    height: 25rem;
-  }
+.threat-info {
+  display: none;
+  transition: var(--transition);
 }
 
-@media screen and (min-width: 1000px) {
-  .featured {
-    grid-template-columns: repeat(3, minmax(290px, 1fr));
-  }
-
-  .tour-img {
-    height: 25rem;
-  }
+.threat:hover {
+  box-shadow: var(--dark-shadow);
 }
 
-/*
-=============== 
-Contact
-===============
-*/
-
-#contact {
-  background: var(--clr-primary-5);
-}
-.contact {
-  padding: 8rem 0;
-  display: grid;
-  grid-template-columns: 1fr;
+.threat:hover .threat-info {
+  display: initial;
 }
 
-.contact-info {
-  margin-bottom: 4rem;
-}
-
-.contact-info h2 {
+.threat-info h4 {
+  font-size: 2rem;
+  text-shadow: var(--text-shadow);
   color: var(--clr-white);
 }
 
-.contact-info p {
-  color: var(--clr-primary-1);
+.threat-btn {
+  padding: 1rem;
+  line-height: 1;
+  font-size: 1.5rem;
 }
 
-.contact-form {
-  display: flex;
+.threat-01 {
+  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
 }
 
-.form-control {
-  font-family: inherit;
-  text-transform: uppercase;
-  letter-spacing: var(--spacing);
-  border: transparent;
-  padding: 0.5rem;
-  width: 100%;
-  max-width: 50rem;
+.threat-01:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+}
+.threat-02 {
+  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
 }
 
-.btn-submit {
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-1);
-  margin-left: 0.5rem;
+.threat-02:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+}
+.threat-03 {
+  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
 }
 
-.btn-submit:hover {
-  background: var(--clr-primary-1);
-  color: var(--clr-primary-5);
+.threat-03:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+}
+.threat-04 {
+  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
 }
 
-@media screen and (min-width: 960px) {
-  .contact {
+.threat-04:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+}
+.threat-05 {
+  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+}
+
+.threat-05:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+}
+.threat-06 {
+  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+}
+
+.threat-06:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+}
+.threat-07 {
+  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+}
+
+.threat-07:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+}
+.threat-08 {
+  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+}
+
+.threat-08:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+}
+.threat-09 {
+  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+}
+
+.threat-09:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+}
+
+@media screen and (min-width: 768px) {
+  .threats {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .contact-info {
-    margin-bottom: 0;
-  }
-
-  .section-form {
-    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 35dvh);
   }
 }
 
 /*
 =============== 
-Gallery
+Boneco
 ===============
 */
 
