@@ -109,7 +109,7 @@ Navbar
 }
 
 .show-links {
-  height: 240px;
+  height: 290px;
 }
 
 @media screen and (min-width: 992px) {
@@ -399,31 +399,92 @@ Threats
 */
 
 #threats {
-  background: var(--off-white-clr);
-  padding: 5rem 0;
+  background: var(--black-clr);
+  padding: 10rem 0;
 }
 
 #threats .section-title {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
+}
+
+#threats .title,
+#threats .intro {
+  color: var(--clr-white);
 }
 
 .threats {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, 30dvh);
+  grid-template-rows: repeat(9, 40dvh);
   gap: 2rem;
+  margin-top: 5rem;
   padding: 0 2rem;
+  grid-template-areas:
+    "threat-01"
+    "threat-02"
+    "threat-03"
+    "threat-04"
+    "threat-05"
+    "threat-06"
+    "threat-07"
+    "threat-08"
+    "threat-09";
+}
+
+@media screen and (min-width: 600px) {
+  .threats {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 40dvh);
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .threats {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 35dvh);
+    grid-template-areas:
+      "threat-01 threat-02"
+      "threat-03 threat-04"
+      "threat-05 threat-06"
+      "threat-07 threat-08"
+      "threat-09 threat-09";
+  }
+}
+@media screen and (min-width: 900px) {
+  .threats {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 35dvh);
+    grid-template-areas:
+      "threat-01 threat-02 threat-03"
+      "threat-04 threat-05 threat-06"
+      "threat-07 threat-08 threat-09";
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .threats {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 150px);
+    gap: 0.5rem;
+    grid-template-areas:
+      "threat-01 threat-01 threat-02 threat-03 threat-04 threat-04"
+      "threat-01 threat-01 threat-02 threat-03 threat-04 threat-04"
+      "threat-05 threat-05 threat-06 threat-06 threat-04 threat-04"
+      "threat-05 threat-05 threat-06 threat-06 threat-07 threat-07"
+      "threat-08 threat-08 threat-09 threat-09 threat-07 threat-07"
+      "threat-08 threat-08 threat-09 threat-09 threat-07 threat-07";
+  }
 }
 
 .threat {
   border-radius: 0.5rem;
   transition: var(--transition);
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding: 1rem;
+  padding: 1.5rem;
   transition: var(--transition);
 }
 
@@ -442,6 +503,7 @@ Threats
 
 .threat-info h4 {
   font-size: 2rem;
+  line-height: 1.2;
   text-shadow: var(--text-shadow);
   color: var(--clr-white);
 }
@@ -452,96 +514,109 @@ Threats
   font-size: 1.5rem;
 }
 
+.threat-btn:hover {
+  background: var(--clr-white);
+}
+
 .threat-01 {
   background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
   transition: var(--bg-transition);
+  grid-area: threat-01;
 }
-
 .threat-01:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
     url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
 }
-.threat-02 {
-  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-  transition: var(--bg-transition);
-}
 
+.threat-02 {
+  background: url("../assets/images/img-threat-02.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+  grid-area: threat-02;
+}
 .threat-02:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-}
-.threat-03 {
-  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-  transition: var(--bg-transition);
+    url("../assets/images/img-threat-02.jpg") no-repeat top/cover;
 }
 
+.threat-03 {
+  background: url("../assets/images/img-threat-03.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+  grid-area: threat-03;
+}
 .threat-03:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-}
-.threat-04 {
-  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-  transition: var(--bg-transition);
+    url("../assets/images/img-threat-03.jpg") no-repeat top/cover;
 }
 
+.threat-04 {
+  background: url("../assets/images/img-threat-04.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+  grid-area: threat-04;
+}
 .threat-04:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-}
-.threat-05 {
-  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-  transition: var(--bg-transition);
+    url("../assets/images/img-threat-04.jpg") no-repeat top/cover;
 }
 
+.threat-05 {
+  background: url("../assets/images/img-threat-05.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+  grid-area: threat-05;
+}
 .threat-05:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-}
-.threat-06 {
-  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-  transition: var(--bg-transition);
+    url("../assets/images/img-threat-05.jpg") no-repeat top/cover;
 }
 
+.threat-06 {
+  background: url("../assets/images/img-threat-06.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+  grid-area: threat-06;
+}
 .threat-06:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-}
-.threat-07 {
-  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-  transition: var(--bg-transition);
+    url("../assets/images/img-threat-06.jpg") no-repeat top/cover;
 }
 
+.threat-07 {
+  background: url("../assets/images/img-threat-07.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+  grid-area: threat-07;
+}
 .threat-07:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-}
-.threat-08 {
-  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-  transition: var(--bg-transition);
+    url("../assets/images/img-threat-07.jpg") no-repeat top/cover;
 }
 
+.threat-08 {
+  background: url("../assets/images/img-threat-08.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+  grid-area: threat-08;
+}
 .threat-08:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-}
-.threat-09 {
-  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
-  transition: var(--bg-transition);
+    url("../assets/images/img-threat-08.jpg") no-repeat top/cover;
 }
 
+.threat-09 {
+  background: url("../assets/images/img-threat-09.jpg") no-repeat top/cover;
+  transition: var(--bg-transition);
+  grid-area: threat-09;
+}
 .threat-09:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+    url("../assets/images/img-threat-09.jpg") no-repeat top/cover;
 }
 
-@media screen and (min-width: 768px) {
-  .threats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 35dvh);
-  }
-}
+/*
+=============== 
+Heroes
+===============
+*/
 
+#heroes {
+  background: var(--clr-white);
+}
 /*
 =============== 
 Boneco
