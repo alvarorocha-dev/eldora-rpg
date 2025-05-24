@@ -111,7 +111,7 @@ Navbar
 }
 
 .show-links {
-  height: 290px;
+  height: 350px;
 }
 
 @media screen and (min-width: 992px) {
@@ -738,9 +738,105 @@ Artifacts
 */
 
 #artifacts {
-  background: var(--second-clr-dark);
-  min-height: 5dvh;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0.8) 10%,
+      rgba(255, 255, 255, 0.8) 90%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../assets/images/artifacts-bg.jpg") no-repeat center/cover;
 }
+
+#artifacts .archetype img {
+  width: 35dvw;
+}
+
+.artifacts-box {
+  margin-top: 3rem;
+  display: flex;
+  gap: 3rem;
+  overflow-x: scroll;
+  padding: 2.5rem 1rem;
+}
+
+.artifacts-box .archetype {
+  min-width: 70dvw;
+  background: var(--clr-white);
+}
+
+.artifacts-box::-webkit-scrollbar {
+  height: 1rem;
+  background-color: transparent;
+}
+
+.artifacts-box::-webkit-scrollbar-track {
+  background-color: var(--first-clr-light);
+  border-radius: 1rem;
+}
+
+.artifacts-box::-webkit-scrollbar-thumb {
+  background: var(--second-clr-dark);
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .artifacts-box .archetype {
+    min-width: 40dvw;
+  }
+  #artifacts .archetype img {
+    width: 30dvw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .artifacts-box .archetype {
+    min-width: 35dvw;
+  }
+  #artifacts .archetype img {
+    width: 25dvw;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .artifacts-box .archetype {
+    min-width: 30dvw;
+  }
+  #artifacts .archetype img {
+    width: 20dvw;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .artifacts-box .archetype {
+    min-width: 25dvw;
+  }
+  #artifacts .archetype img {
+    width: 18dvw;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .artifacts-box .archetype {
+    min-width: 23dvw;
+  }
+  #artifacts .archetype img {
+    width: 15dvw;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .artifacts-box .archetype {
+    min-width: 18dvw;
+  }
+  #artifacts .archetype img {
+    width: 12dvw;
+  }
+}
+/* @media screen and (min-width: 1600px) {
+  .artifacts-box .archetype {
+    min-width: 15dvw;
+  }
+  #artifacts .archetype img {
+    width: 10dvw;
+  }
+} */
 
 /*
 =============== 
