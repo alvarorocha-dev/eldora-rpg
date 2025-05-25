@@ -111,7 +111,7 @@ Navbar
 }
 
 .show-links {
-  height: 350px;
+  height: 390px;
 }
 
 @media screen and (min-width: 992px) {
@@ -526,93 +526,104 @@ Threats
 }
 
 .threat-01 {
-  background: url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+  background: url("../assets/images/threats/echowood-dark-forest.jpg") no-repeat
+    top/cover;
   transition: var(--bg-transition);
   grid-area: threat-01;
 }
 .threat-01:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-01.jpg") no-repeat top/cover;
+    url("../assets/images/threats/echowood-dark-forest.jpg") no-repeat top/cover;
 }
 
 .threat-02 {
-  background: url("../assets/images/img-threat-02.jpg") no-repeat top/cover;
+  background: url("../assets/images/threats/kryntos-the-minotaur.jpg") no-repeat
+    top/cover;
   transition: var(--bg-transition);
   grid-area: threat-02;
 }
 .threat-02:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-02.jpg") no-repeat top/cover;
+    url("../assets/images/threats/kryntos-the-minotaur.jpg") no-repeat top/cover;
 }
 
 .threat-03 {
-  background: url("../assets/images/img-threat-03.jpg") no-repeat top/cover;
+  background: url("../assets/images/threats/green-ear-guild.jpg") no-repeat
+    top/cover;
   transition: var(--bg-transition);
   grid-area: threat-03;
 }
 .threat-03:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-03.jpg") no-repeat top/cover;
+    url("../assets/images/threats/green-ear-guild.jpg") no-repeat top/cover;
 }
 
 .threat-04 {
-  background: url("../assets/images/img-threat-04.jpg") no-repeat top/cover;
+  background: url("../assets/images/threats/sundara-the-necromancer.jpg")
+    no-repeat top/cover;
   transition: var(--bg-transition);
   grid-area: threat-04;
 }
 .threat-04:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-04.jpg") no-repeat top/cover;
+    url("../assets/images/threats/sundara-the-necromancer.jpg") no-repeat
+      top/cover;
 }
 
 .threat-05 {
-  background: url("../assets/images/img-threat-05.jpg") no-repeat top/cover;
+  background: url("../assets/images/threats/soulless-horde.jpg") no-repeat
+    top/cover;
   transition: var(--bg-transition);
   grid-area: threat-05;
 }
 .threat-05:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-05.jpg") no-repeat top/cover;
+    url("../assets/images/threats/soulless-horde.jpg") no-repeat top/cover;
 }
 
 .threat-06 {
-  background: url("../assets/images/img-threat-06.jpg") no-repeat top/cover;
+  background: url("../assets/images/threats/pyraxia-queen-of-flames.jpg")
+    no-repeat top/cover;
   transition: var(--bg-transition);
   grid-area: threat-06;
 }
 .threat-06:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-06.jpg") no-repeat top/cover;
+    url("../assets/images/threats/pyraxia-queen-of-flames.jpg") no-repeat
+      top/cover;
 }
 
 .threat-07 {
-  background: url("../assets/images/img-threat-07.jpg") no-repeat top/cover;
+  background: url("../assets/images/threats/astraleon-shadowlord.jpg") no-repeat
+    top/cover;
   transition: var(--bg-transition);
   grid-area: threat-07;
 }
 .threat-07:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-07.jpg") no-repeat top/cover;
+    url("../assets/images/threats/astraleon-shadowlord.jpg") no-repeat top/cover;
 }
 
 .threat-08 {
-  background: url("../assets/images/img-threat-08.jpg") no-repeat top/cover;
+  background: url("../assets/images/threats/scourge-of-veilshore.jpg") no-repeat
+    top/cover;
   transition: var(--bg-transition);
   grid-area: threat-08;
 }
 .threat-08:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-08.jpg") no-repeat top/cover;
+    url("../assets/images/threats/scourge-of-veilshore.jpg") no-repeat top/cover;
 }
 
 .threat-09 {
-  background: url("../assets/images/img-threat-09.jpg") no-repeat top/cover;
+  background: url("../assets/images/threats/portal-of-oblivion.jpg") no-repeat
+    top/cover;
   transition: var(--bg-transition);
   grid-area: threat-09;
 }
 .threat-09:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("../assets/images/img-threat-09.jpg") no-repeat top/cover;
+    url("../assets/images/threats/portal-of-oblivion.jpg") no-repeat top/cover;
 }
 
 /*
@@ -749,19 +760,19 @@ Artifacts
 }
 
 #artifacts .archetype img {
-  width: 35dvw;
+  width: 80%;
 }
 
 .artifacts-box {
   margin-top: 3rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(350px, 1fr));
   gap: 3rem;
   overflow-x: scroll;
   padding: 2.5rem 1rem;
 }
 
 .artifacts-box .archetype {
-  min-width: 70dvw;
   background: var(--clr-white);
 }
 
@@ -779,64 +790,6 @@ Artifacts
   background: var(--second-clr-dark);
   border-radius: 1rem;
 }
-
-@media screen and (min-width: 768px) {
-  .artifacts-box .archetype {
-    min-width: 40dvw;
-  }
-  #artifacts .archetype img {
-    width: 30dvw;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .artifacts-box .archetype {
-    min-width: 35dvw;
-  }
-  #artifacts .archetype img {
-    width: 25dvw;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .artifacts-box .archetype {
-    min-width: 30dvw;
-  }
-  #artifacts .archetype img {
-    width: 20dvw;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .artifacts-box .archetype {
-    min-width: 25dvw;
-  }
-  #artifacts .archetype img {
-    width: 18dvw;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .artifacts-box .archetype {
-    min-width: 23dvw;
-  }
-  #artifacts .archetype img {
-    width: 15dvw;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .artifacts-box .archetype {
-    min-width: 18dvw;
-  }
-  #artifacts .archetype img {
-    width: 12dvw;
-  }
-}
-/* @media screen and (min-width: 1600px) {
-  .artifacts-box .archetype {
-    min-width: 15dvw;
-  }
-  #artifacts .archetype img {
-    width: 10dvw;
-  }
-} */
 
 /*
 =============== 
