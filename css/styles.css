@@ -408,6 +408,11 @@ Threats
 #threats {
   background: var(--black-clr);
   padding: 10rem 0;
+  --gold-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.1)
+  );
 }
 
 #threats .section-title {
@@ -492,7 +497,6 @@ Threats
   flex-direction: column;
   justify-content: end;
   padding: 1.5rem;
-  transition: var(--transition);
 }
 
 .threat-info {
@@ -643,102 +647,54 @@ Heroes
 .heroes-box {
   margin-top: 3rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.heroes-featured {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
-.hero {
-  width: 100%;
-  height: 35dvh;
-  padding: 2rem;
+.single-heroes {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  align-items: start;
+  gap: 2rem;
+}
+
+#heroes .single-news {
+  padding: 1.5rem;
+}
+
+.single-hero-img {
+  width: 40%;
+}
+
+.single-hero-img img {
   border-radius: 0.5rem;
-  transition: var(--bg-transition);
+  transition: var(--transition);
 }
 
-.hero-info h4 {
-  font-size: 2rem;
-  line-height: 1.2;
-  text-shadow: var(--text-shadow);
-  color: var(--clr-white);
+#heroes .single-news:hover .single-hero-img img {
+  transform: scale(1.05);
 }
 
-.hero-btn {
-  padding: 1rem;
-  line-height: 1;
-  font-size: 1.5rem;
-}
-
-.hero-btn:hover {
-  background: var(--clr-white);
-  color: var(--second-clr-dark);
-  border: 2px solid var(--second-clr-dark);
-}
-
-.hero-01 {
-  background: linear-gradient(
-      180deg,
-      rgba(214, 153, 25, 0.7),
-      rgba(214, 153, 25, 0.7)
-    ),
-    url("../assets/images/bg-heroes-01.jpg") no-repeat top/cover;
-}
-.hero-01:hover {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../assets/images/bg-heroes-01.jpg") no-repeat top/cover;
-}
-
-.hero-02 {
-  background: linear-gradient(
-      180deg,
-      rgba(214, 153, 25, 0.7),
-      rgba(214, 153, 25, 0.7)
-    ),
-    url("../assets/images/bg-heroes-02.jpg") no-repeat top/cover;
-}
-.hero-02:hover {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../assets/images/bg-heroes-02.jpg") no-repeat top/cover;
-}
-
-.hero-03 {
-  background: linear-gradient(
-      180deg,
-      rgba(214, 153, 25, 0.7),
-      rgba(214, 153, 25, 0.7)
-    ),
-    url("../assets/images/bg-heroes-03.jpg") no-repeat top/cover;
-}
-.hero-03:hover {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../assets/images/bg-heroes-03.jpg") no-repeat top/cover;
-}
-
-.hero-04 {
-  background: linear-gradient(
-      180deg,
-      rgba(214, 153, 25, 0.7),
-      rgba(214, 153, 25, 0.7)
-    ),
-    url("../assets/images/bg-heroes-04.jpg") no-repeat top/cover;
-}
-.hero-04:hover {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../assets/images/bg-heroes-04.jpg") no-repeat top/cover;
-}
-
-@media screen and (min-width: 600px) {
-  .hero {
-    height: 45dvh;
+@media screen and (min-width: 900px) {
+  .heroes-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    justify-content: space-between;
   }
-}
-@media screen and (min-width: 800px) {
-  .hero {
+
+  .heroes-featured {
     width: 48%;
-    height: 40dvh;
+  }
+
+  .single-heroes {
+    width: 50%;
   }
 }
 
@@ -913,64 +869,76 @@ News
 
 /*
 =============== 
-Boneco
+Gallery
 ===============
 */
-
 #gallery {
-  background: var(--clr-primary-5);
+  background: var(--clr-white);
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr;
+.overlay-box {
+  background: var(--gold-gradient);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-.gallery-frame {
+.overlay-box-dark {
+  background: var(--dark-gradient);
+}
+
+.overlay-img-container {
   position: relative;
 }
 
-.gallery-img {
-  height: 30rem;
-  object-fit: cover;
-  opacity: 0.8;
-  transition: var(--transition);
-}
-
-.gallery-icon {
+.overlay-info {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-  color: var(--clr-white);
-  font-size: 3rem;
-  opacity: 1;
+  bottom: 0;
+  padding: 1.5rem;
+  display: none;
   transition: var(--transition);
 }
 
-.gallery-frame:hover .gallery-icon {
-  opacity: 0;
-}
-
-.gallery-frame:hover .gallery-img {
+.overlay-img {
   opacity: 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: var(--transition);
 }
 
-@media screen and (min-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-img {
-    height: 35rem;
-  }
+.overlay-box:hover .overlay-img {
+  opacity: 0.4;
 }
 
-@media screen and (min-width: 850px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.overlay-box:hover .overlay-info {
+  display: block;
 }
+
+.overlay-box h3 {
+  line-height: 1.2;
+  color: var(--clr-white);
+  text-shadow: var(--text-shadow-mini);
+}
+
+.overlay-box p {
+  color: var(--clr-white);
+  text-shadow: var(--text-shadow-mini);
+}
+
+.overlay-btn {
+  padding: 1rem;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.overlay-btn:hover {
+  background-color: var(--clr-white);
+}
+
+/*
+=============== 
+Boneco
+===============
+*/
 
 /*
 =============== 
