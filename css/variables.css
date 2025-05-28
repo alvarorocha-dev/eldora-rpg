@@ -30,7 +30,7 @@ Variables
   );
   --dark-gradient: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 1)
   );
 
@@ -141,6 +141,31 @@ button {
     font-size: 1.7rem;
   }
 }
+
+/* ============== > Scrollbsr Style */
+
+.artifacts-box::-webkit-scrollbar {
+  height: 1rem;
+  background-color: transparent;
+}
+
+.single-heroes::-webkit-scrollbar {
+  width: 1rem;
+  background-color: transparent;
+}
+
+.artifacts-box::-webkit-scrollbar-track,
+.single-heroes::-webkit-scrollbar-track {
+  background-color: var(--first-clr-light);
+  border-radius: 1rem;
+}
+
+.artifacts-box::-webkit-scrollbar-thumb,
+.single-heroes::-webkit-scrollbar-thumb {
+  background: var(--second-clr-dark);
+  border-radius: 1rem;
+}
+
 /*  global classes */
 
 .btn {
@@ -224,6 +249,7 @@ button {
   margin-right: 1rem;
 }
 
+
 @media screen and (min-width: 600px) {
   .title {
     font-size: 4rem;
@@ -245,4 +271,64 @@ button {
     var(--first-clr-light),
     var(--second-clr-light)
   );
+}
+
+/* ============== > Overlay Images */
+
+.overlay-box {
+  background: var(--gold-gradient);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.overlay-box-dark {
+  background: var(--dark-gradient);
+}
+
+.overlay-img-container {
+  position: relative;
+}
+
+.overlay-info {
+  padding: 1.5rem;
+  display: none;
+  transition: var(--transition);
+}
+
+.overlay-img {
+  opacity: 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.overlay-box:hover .overlay-img {
+  opacity: 0.4;
+}
+
+.overlay-box:hover .overlay-info {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.overlay-box h3 {
+  line-height: 1.2;
+  color: var(--clr-white);
+  text-shadow: var(--text-shadow-mini);
+}
+
+.overlay-box p {
+  color: var(--clr-white);
+  text-shadow: var(--text-shadow-mini);
+}
+
+.overlay-btn {
+  padding: 1rem;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.overlay-btn:hover {
+  background-color: var(--clr-white);
 }
