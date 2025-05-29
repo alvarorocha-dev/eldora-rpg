@@ -249,7 +249,6 @@ button {
   margin-right: 1rem;
 }
 
-
 @media screen and (min-width: 600px) {
   .title {
     font-size: 4rem;
@@ -283,6 +282,9 @@ button {
 
 .overlay-box-dark {
   background: var(--dark-gradient);
+}
+.overlay-box-black {
+  background: var(--black-clr);
 }
 
 .overlay-img-container {
@@ -332,3 +334,5 @@ button {
 .overlay-btn:hover {
   background-color: var(--clr-white);
 }
+
+

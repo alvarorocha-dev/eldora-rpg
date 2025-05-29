@@ -221,7 +221,7 @@ Hero
   letter-spacing: var(--spacing);
 }
 
-.hero-btn {
+.hero .hero-btn {
   padding: 1.5rem 2rem;
   font: 600 1.8rem/1 var(--first-ff);
   background: var(--second-clr-light);
@@ -229,7 +229,7 @@ Hero
   border: 2px solid var(--second-clr-light);
 }
 
-.hero-btn:hover {
+.hero .hero-btn:hover {
   background: transparent;
   color: var(--clr-white);
   border-color: var(--clr-white);
@@ -666,6 +666,9 @@ Heroes
   justify-content: center;
 }
 
+.card-hero {
+  height: 35dvh;
+}
 .card-hero .overlay-img-container {
   height: 35dvh;
 }
@@ -676,16 +679,17 @@ Heroes
 .card-hero h4 {
   color: var(--clr-white);
   text-shadow: var(--text-shadow);
-  font-size: 2.5rem;
+  font-size: 2.1rem;
 }
 
 .location {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
 }
 
 .location i {
   margin-right: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .hero-btn {
@@ -737,6 +741,7 @@ Heroes
 @media screen and (min-width: 1200px) {
   .single-heroes {
     height: 80dvh;
+    padding: 1rem 0;
   }
 
   .card-hero {
