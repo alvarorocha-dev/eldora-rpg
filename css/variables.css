@@ -114,6 +114,7 @@ p {
 
 button {
   font-family: inherit;
+  outline: none;
 }
 
 @media screen and (min-width: 800px) {
@@ -188,11 +189,14 @@ button {
 }
 
 .container {
-  max-width: 1180px;
-  width: 90vw;
+  width: min(90dvw, 1180px);
   margin: 0 auto;
   padding: 15rem 0;
 }
+/* .container {
+  max-width: 1180px;
+  width: 90vw; 
+} */
 
 @media screen and (max-width: 768px) {
   .container {
@@ -334,5 +338,3 @@ button {
 .overlay-btn:hover {
   background-color: var(--clr-white);
 }
-
-
