@@ -146,7 +146,8 @@ button {
 
 /* ============== > Scrollbsr Style */
 
-.artifacts-box::-webkit-scrollbar {
+.artifacts-box::-webkit-scrollbar,
+.gallery-box::-webkit-scrollbar {
   height: 1rem;
   background-color: transparent;
 }
@@ -157,13 +158,15 @@ button {
 }
 
 .artifacts-box::-webkit-scrollbar-track,
-.single-heroes::-webkit-scrollbar-track {
+.single-heroes::-webkit-scrollbar-track,
+.gallery-box::-webkit-scrollbar-track {
   background-color: var(--first-clr-light);
   border-radius: 1rem;
 }
 
 .artifacts-box::-webkit-scrollbar-thumb,
-.single-heroes::-webkit-scrollbar-thumb {
+.single-heroes::-webkit-scrollbar-thumb,
+.gallery-box::-webkit-scrollbar-thumb {
   background: var(--second-clr-dark);
   border-radius: 1rem;
 }
