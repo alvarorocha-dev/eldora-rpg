@@ -833,7 +833,7 @@ News
 
 .featured-info {
   margin-top: 1.5rem;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 .news-category {
@@ -870,21 +870,20 @@ News
   box-shadow: var(--light-shadow);
 }
 
-.single-news:hover .single-news-img {
-  transform: scale(1.02);
-  opacity: 1;
-}
-
 .single-news-img {
   width: 30%;
   object-fit: cover;
   height: auto;
   transition: var(--transition);
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+.single-news:hover .single-news-img {
+  opacity: 1;
 }
 
 .single-news-info {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .single-news .news-title {
@@ -950,12 +949,6 @@ Gallery
   overflow-x: scroll;
   padding-bottom: 1.5rem;
 }
-/* .gallery-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  overflow-x: scroll;
-} */
 
 #gallery .overlay-info h3 {
   font-size: 2.5rem;
@@ -968,10 +961,6 @@ Gallery
 }
 
 @media screen and (min-width: 450px) {
-  /* .gallery-box {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  } */
-
   #gallery .overlay-img {
     height: 35dvh;
   }
@@ -1013,12 +1002,13 @@ Newsletter
 }
 
 .newsletter-img-container {
-  width: 50%;
+  width: 95%;
   margin: 0 auto;
+  padding-top: 10rem;
 }
 
 .newsletter-img {
-  margin-top: -10rem;
+  margin-top: -15rem;
 }
 
 .newsletter-content {
@@ -1054,6 +1044,17 @@ Newsletter
 .newsletter-form .form-btn {
   padding: 1rem 1.5rem;
   align-self: end;
+}
+
+@media screen and (min-width: 500px) {
+  .newsletter-img-container {
+    width: 70%;
+    padding-top: 5rem;
+  }
+
+  .newsletter-img {
+    margin-top: -15rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -1105,7 +1106,7 @@ Footer
 #footer {
   background: var(--second-clr-dark);
   position: relative;
-  padding-top: 10rem;
+  padding-top: 15rem;
 }
 
 .footer {
@@ -1117,7 +1118,7 @@ Footer
 }
 
 .footer-logo img {
-  width: 35%;
+  width: 40%;
   margin: 0 auto;
 }
 
@@ -1192,13 +1193,14 @@ Footer
 
 @media screen and (min-width: 768px) {
   #footer {
-    padding-top: 15rem;
+    padding-top: 25rem;
   }
 
   .footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 0;
   }
 
   .footer-logo img {
@@ -1214,12 +1216,12 @@ Footer
   .footer-img {
     display: block;
     width: 22rem;
-    margin-bottom: -4rem;
+    align-self: flex-end;
   }
 }
 
-/* @media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {
   #footer {
     padding-top: 15rem;
   }
-} */
+}
