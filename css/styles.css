@@ -662,13 +662,19 @@ Heroes
   gap: 2rem;
 }
 
+.single-heroes-container {
+  text-align: center;
+  overflow-y: scroll;
+}
+
 .single-heroes {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  height: 50dvh;
-  overflow-y: scroll;
+  height: 60dvh;
   justify-content: center;
+  margin-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 .card-hero {
@@ -730,8 +736,13 @@ Heroes
     width: 48%;
   }
 
-  .single-heroes {
+  .single-heroes-container {
     width: 50%;
+    text-align: center;
+  }
+
+  .single-heroes {
+    height: 50dvh;
   }
 
   .heroes-featured .overlay-box {
@@ -745,7 +756,6 @@ Heroes
 
 @media screen and (min-width: 1200px) {
   .single-heroes {
-    height: 80dvh;
     padding: 1rem 0;
   }
 
