@@ -20,7 +20,7 @@ Header
 */
 
 header {
-  min-height: 100dvh;
+  min-height: 100vh;
   background: linear-gradient(
       180deg,
       rgba(28, 102, 17, 0.4),
