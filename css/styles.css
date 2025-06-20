@@ -687,6 +687,10 @@ Heroes
   height: 35dvh;
 }
 
+.card-hero .overlay-info {
+  text-align: left;
+}
+
 .card-hero h4 {
   color: var(--clr-white);
   text-shadow: var(--text-shadow);
