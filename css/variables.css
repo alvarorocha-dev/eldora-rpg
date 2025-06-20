@@ -181,7 +181,7 @@ button {
   border: 2px solid var(--second-clr-dark);
   border-radius: 0.5rem;
   padding: 1rem 2rem;
-  letter-spacing: var(--spacing);
+  letter-spacing: 0.15rem;
   display: inline-block;
   font: 600 1.8rem/1.5 var(--first-ff);
   transition: var(--transition);
@@ -190,7 +190,7 @@ button {
 }
 .btn:hover {
   color: var(--second-clr-dark);
-  background: var(--first-clr-light);
+  background: var(--clr-white);
   border: 2px solid var(--second-clr-dark);
 }
 
