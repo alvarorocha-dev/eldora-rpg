@@ -278,7 +278,7 @@ About
 }
 
 .about-img {
-  min-height: 50dvh;
+  min-height: 50vh;
   background: url("../assets/images/about-img-gallery-bg-01.jpg") no-repeat
     top/cover;
   width: 100%;
