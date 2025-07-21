@@ -1073,7 +1073,7 @@ Newsletter
 }
 .newsletter-form input {
   font: 400 1.6rem/1.5 var(--second-ff);
-  padding: 0.15rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: 2px solid transparent;
   width: 100%;
